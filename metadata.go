@@ -2,6 +2,7 @@ package sample
 
 import "github.com/project-flogo/core/data/coerce"
 
+/*
 type Settings struct {
 	ASetting string `md:"aSetting"`
 }
@@ -20,7 +21,7 @@ func (r *Input) ToMap() map[string]interface{} {
 	return map[string]interface{}{
 		"anInput": r.AnInput,
 	}
-}
+} */
 
 type Output struct {
 	AnOutput string `md:"anOutput"`
