@@ -11,7 +11,7 @@ func init() {
 	_ = activity.Register(&Activity{}) //activity.Register(&Activity{}, New) to create instances using factory method 'New'
 }
 
-var activityMd = activity.ToMetadata(&Output{})
+var activityMd = activity.ToMetadata(&Settings{}, &Input{}, &Output{})
 
 // Activity is an sample Activity that can be used as a base to create a custom activity
 type Activity struct {
