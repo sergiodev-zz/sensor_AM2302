@@ -23,6 +23,8 @@ func New(ctx activity.InitContext) (activity.Activity, error) {
 		return nil, err
 	}
 
+	ctx.Logger().Debugf("Setting: %s", s.ASetting)
+
 	act := &Activity{} //add aSetting to instance
 
 	return act, nil
@@ -39,6 +41,25 @@ func (a *Activity) Metadata() *activity.Metadata {
 
 // Eval implements api.Activity.Eval - Logs the Message
 func (a *Activity) Eval(ctx activity.Context) (done bool, err error) {
+
+	input := &Input{}
+	err = ctx.GetInputObject(input)
+	if err != nil {
+		return true, err
+	}
+
+	ctx.Logger().Debugf("Input: %s", input.AnInput)
+
+	// error := rpio.Open()
+	// if error != nil {
+	// 	return true, err
+	// }
+	// pin := rpio.Pin(17)
+	// pin.Input() // Input mode
+	// res := pin.Read()
+	// pin := 11
+	// s := dht.DHT12
+	// temperature, humidity, retried, err := dht.ReadDHTxxWithRetry(dht.DHT11, pin, false, 10)
 
 	err = dht.HostInit()
 	if err != nil {

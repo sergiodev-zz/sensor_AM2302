@@ -1,24 +1,24 @@
 {
-  "name": "sensor_AM2302",
+  "name": "sample-activity",
   "type": "flogo:activity",
   "version": "0.0.1",
-  "title": "Sensor AM2302",
-  "description": "Sensor AM2302 temperature and humidity acquisition",
+  "title": "Sample Activity",
+  "description": "Sample Activity",
   "homepage": "https://github.com/project-flogo/tree/master/examples/activity",
-
   "settings": [
     {
       "name": "aSetting",
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   ],
   "input": [
     {
       "name": "anInput",
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   ],
-
   "output": [
     {
       "name": "anOutput",
