@@ -43,7 +43,7 @@ func (a *Activity) Eval(ctx activity.Context) (done bool, err error) {
 	temp := strconv.FormatFloat(temperature, 'f', 2, 64) + " °C"
 	humy := strconv.FormatFloat(humidity, 'f', 2, 64) + " %"
 
-	output := &Output{AnOutput: temp + " - " + humy}
+	output := &Output{OutputMessage: temp + " - " + humy}
 	err = ctx.SetOutputObject(output)
 	if err != nil {
 		return true, err

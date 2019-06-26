@@ -10,7 +10,7 @@
 
   "output": [
     {
-      "name": "anOutput",
+      "name": "OutputMessage",
       "type": "string"
     }
   ]

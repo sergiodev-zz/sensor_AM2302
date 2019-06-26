@@ -28,5 +28,5 @@ func TestEval(t *testing.T) {
 	output := &Output{}
 	err = tc.GetOutputObject(output)
 	assert.Nil(t, err)
-	assert.Equal(t, "test", output.AnOutput)
+	assert.Equal(t, "test", output.OutputMessage)
 }
