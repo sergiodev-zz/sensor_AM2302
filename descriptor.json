@@ -1,5 +1,5 @@
 {
-  "name": "sensor_AM2302",
+  "name": "sensor_AM2302", 
   "type": "flogo:activity",
   "version": "0.0.1",
   "title": "Sensor AM2302",
