@@ -6,6 +6,17 @@
   "description": "Sensor AM2302 temperature and humidity acquisition",
   "homepage": "https://github.com/project-flogo/tree/master/examples/activity",
 
+  "settings": [
+    {
+
+    }
+  ],
+  "input": [
+    {
+
+    }
+  ],
+
   "output": [
     {
       "name": "anOutput",
