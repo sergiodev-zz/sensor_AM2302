@@ -10,8 +10,6 @@ type Output struct {
 
 func (o *Output) FromMap(values map[string]interface{}) error {
 	strVal, _ := coerce.ToString(values["OutputMessage"])
-	strVal1, _ := coerce.ToString(values["Temp"])
-	strVal2, _ := coerce.ToString(values["Humi"])
 	o.OutputMessage = strVal
 	return nil
 }
