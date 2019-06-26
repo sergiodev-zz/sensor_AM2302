@@ -40,10 +40,14 @@ func (a *Activity) Eval(ctx activity.Context) (done bool, err error) {
 		return true, err
 	}
 
-	temp := strconv.FormatFloat(temperature, 'f', 2, 64) + " °C"
-	humy := strconv.FormatFloat(humidity, 'f', 2, 64) + " %"
+	temp := strconv.FormatFloat(temperature, 'f', 1, 64)
+	humy := strconv.FormatFloat(humidity, 'f', 1, 64)
 
-	output := &Output{OutputMessage: temp + " - " + humy}
+	output := &Output{
+		OutputMessage: temp + " °C --- " + humy + " %",
+		Temp:          temp,
+		Humi:          humy,
+	}
 	err = ctx.SetOutputObject(output)
 	if err != nil {
 		return true, err

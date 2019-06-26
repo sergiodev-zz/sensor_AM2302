@@ -12,6 +12,14 @@
     {
       "name": "OutputMessage",
       "type": "string"
+    },
+    {
+      "name": "Temp",
+      "type": "string"
+    },
+    {
+      "name": "Humi",
+      "type": "string"
     }
   ]
 }
