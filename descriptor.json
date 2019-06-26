@@ -8,10 +8,14 @@
 
   "settings": [
     {
+      "name": "aSetting",
+      "type": "string"
     }
   ],
   "input": [
     {
+      "name": "anInput",
+      "type": "string"
     }
   ],
 
